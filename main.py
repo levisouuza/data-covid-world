@@ -83,7 +83,7 @@ def world_covid(directory, url):
         #    requests.get(url).status_code
 
             #try:
-        load_db.load_database('localhost', 'postgres', 'postgres', '1123581321', carga_inicial, dir_inicial, extract.gera_datas(dt))
+        load_db.load_database('localhost', 'postgres', 'postgres', 'password', carga_inicial, dir_inicial, extract.gera_datas(dt))
             #except:
                 #print('Erro de inclusão no banco.')
 
