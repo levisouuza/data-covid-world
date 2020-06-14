@@ -78,17 +78,17 @@ def world_covid(directory, url):
 
         del_arq.del_arq(dir_inicial)
 
-        #try:
+        try:
 
-        #    requests.get(url).status_code
+           requests.get(url).status_code
 
-            #try:
-        load_db.load_database('localhost', 'postgres', 'postgres', 'password', carga_inicial, dir_inicial, extract.gera_datas(dt))
-            #except:
-                #print('Erro de inclusão no banco.')
+           try:
+               load_db.load_database('localhost', 'postgres', 'postgres', 'password', carga_inicial, dir_inicial, extract.gera_datas(dt))
+            except:
+                print('Erro de inclusão no banco.')
 
-        #except:
-        #    print('Falha na conexão.')
+        except:
+           print('Falha na conexão.')
 
     except KeyboardInterrupt:
         print('Execução cancelada pelo usuário.')
